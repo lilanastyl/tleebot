@@ -41,7 +41,7 @@ def callback_inline(call):
 
     if call.data == "C":
         datas[user_id] = ""
-        bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.id, text="Калькулятор очищен.", reply_markup=keyboards.inMenu)
+        bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.id, text="Калькулятор- очищен.", reply_markup=keyboards.inMenu)
     elif call.data.isdigit() or call.data in ['+', '-', '/', '*', '.', '()']:
         datas[user_id] += call.data
         bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.id, text=datas[user_id], reply_markup=keyboards.inMenu)
